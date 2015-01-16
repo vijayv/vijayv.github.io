@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a graduate student focusing on data analytics at the University of California, Berkeley. I am interested in both the technical and social aspects of analytics and enjoy working with data. Before starting my masters program, I worked as a Senior Business Intelligence Analyst/Data Engineer at a startup in Boulder, CO called Trada.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself. 
+When I am not thinking about data, I am day dreaming about exotic places that I want to travel to. The background music in my life is most likely to be made by Bonobo. My favorite color is purple (I know :-) ).
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[vavelagapudi@gmail.com](mailto:vavelagapudi@gmail.com)
