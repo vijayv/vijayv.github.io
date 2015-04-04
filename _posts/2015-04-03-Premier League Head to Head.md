@@ -19,47 +19,16 @@ fill-opacity: .5;
   fill-opacity: .8;
 }
 
-/*path.chord {
-stroke: #000;
-stroke-width: .25px;
-}*/
-
 #circle:hover path.fade {
   fill-opacity: .1;
   line-height: 0;
 }
 
-/*#title {
-  background-color: "#EEEEEEE";
-}*/
-/*
-#title h2 {
-  font-size: 2em;
-}*/
-/*
-#title p {
-  font-size: 1.4em;
-}*/
-
-/*#instructions p {
-  font-size: 1.2em;
-}
-
-#instructions ul {
-  font-size: 1.2em;
-  list-style: square outside none;
-}*/
-
-body {
-  margin: auto;
-  height: 100%;
-  width: 80%;
-}
 </style>
 <body>
 
 <div id="title">
-  <p class="lead">A look at the Premier League's current top 5 teams and the number of wins they've recorded over each other in their respective histories.</p>
+  <p class="lead">A d3 chord diagram of the English Premier League's (arguably) top 5 teams and the number of wins they've recorded over each others in their respective histories.</p>
 </div>
 
 <div id="instructions">
@@ -68,6 +37,7 @@ body {
       <li>The color of each band represents the team that has the most wins in that respective head-to-head match up.</li>
       <li>Hover over each team's name to find identify that teams record with each of the other teams.</li>
       <li>Hover over each chord to see a tool-tip of the head-to-head stats between the two teams.</li>
+      <li>The size of each wedge is representative of the total number of games that team has won against the others in the top 5. </li>
     </ul>
     <p>Data was gathered from <a href="http://www.arsenal-world.co.uk/head_to_head/manchester_city/vs/liverpool/index.shtml"> this location</a>.</p>
 </div>
