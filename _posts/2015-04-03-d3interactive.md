@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Premier League Head to Head
-permalink: /d3interactive/
 ---
 <style>
 
