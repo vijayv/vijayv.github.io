@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Wells Fargo Protothon
+thumb: Wells Fargo Protothon.jpg
+blurb: My experience winning first place in a prototyping hackathon at Wells Fargo HQ.
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/wellsfargo/wellsfargo_vijay_bigcheck.jpg)
