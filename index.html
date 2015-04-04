@@ -3,19 +3,28 @@ layout: default
 ---
 
 <div class="intro">
-    <p>These are some of the projects and things that I've worked on. Send me an email if something peaks your interest. </p>
 </div>
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
       <div class="entry">
-        {{ post.content | truncatewords:40}}
+        <div class="banner">
+          <div class="image">
+            <img src="/images/thumbs/{{post.thumb}}"/>
+          </div>
+          <div class="content">
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            {% if post.blurb %}
+              <p>{{ post.blurb }}</p>
+            {% else %}
+              {{ post.content | truncatewords:40}}
+            {% endif %}
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+          </div>
+        </div>
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
 </div>
