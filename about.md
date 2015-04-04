@@ -10,4 +10,4 @@ When I am not thinking about data, I am day dreaming about exotic places that I 
 
 ### Contact me
 
-[vavelagapudi@gmail.com](mailto:vavelagapudi@gmail.com)
+[vijayv@ischool.berkeley.edu](mailto:vijayv@ischool.berkeley.edu)
