@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Accomplishments
-permalink: /accomplishments/
+title: Highlights
+permalink: /highlights/
 ---
 
 ### Professional
