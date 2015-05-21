@@ -17,7 +17,7 @@ html{
   font-size: 100%;
 
     /* This image will be displayed fullscreen */
-    background:url('images/background.jpg') no-repeat center center;
+    background:url('assets/images/background.jpg') no-repeat center center;
 
     /* Ensure the html element always takes up the full height of the browser window */
     min-height:100%;
@@ -26,12 +26,9 @@ html{
     background-size:cover;
 }
 
-body{
-    /* Workaround for some mobile browsers */
-    min-height:100%;
-}
-
 body {
+  /* Workaround for some mobile browsers */
+  min-height:100%;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -41,7 +38,7 @@ body {
   max-width: 1100px;
   padding: 40px 100px;
   width: 100%;
-  /*background:url(/images/background.png);*/
+  /*background:url(assets/images/background.png);*/
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
@@ -168,7 +165,7 @@ img {
 //
 
 .wrapper-masthead {
-  /*background-image: url(/images/background.png);*/
+  /*background-image: url(assets/images/background.png);*/
   margin-bottom: 20px;
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
