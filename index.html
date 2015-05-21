@@ -2,18 +2,14 @@
 layout: default
 ---
 
-<div class="intro">
-</div>
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
-
-      <div class="entry">
-        <div class="banner">
-          <div class="image">
-            <img src="assets/images/thumbs/{{post.thumb}}"/>
+     <div class="row">
+        <article class="post">
+          <div class="col-md-4 entry image">
+              <img src="assets/images/thumbs/{{post.thumb}}"/>
           </div>
-          <div class="content">
+          <div class="col-md-8 entry content">
             <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
             {% if post.blurb %}
               <p>{{ post.blurb }}</p>
@@ -22,9 +18,7 @@ layout: default
             {% endif %}
             <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
           </div>
-        </div>
+        </article>
       </div>
-
-    </article>
   {% endfor %}
 </div>

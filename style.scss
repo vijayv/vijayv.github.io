@@ -8,6 +8,8 @@
 @import "_reset";
 @import "_variables";
 // Syntax highlighting @import is at the bottom of this file
+@import "_bootstrap";
+
 
 /**************/
 /* BASE RULES */
@@ -263,25 +265,25 @@ nav {
 // .main
 //
 
-.banner {
-  background: $white;
+.entry {
+  /*background: $white;*/
   /*border: 1px solid;*/
   height: 200px;
-  width: 100%;
-  padding: 10px 10px 10px 10px;
+  /*width: 100%;*/
+  padding: 10px 10px;
 }
 
-.banner .content {
+.entry .content {
   width: 70%;
   height: 100%;
   float:right;
 }
 
-.banner .content h1 {
+.entry .content h1 {
   margin: 0;
 }
 
-.banner .image {
+.entry .image {
   width: 30%;
   height: 100%;
   float:left;
@@ -289,10 +291,10 @@ nav {
   margin-right: auto;
 }
 
-.banner img{
-  max-height: 95%;
-  max-width: 95%;
-  padding: 5% 5%;
+.entry img{
+  max-height: 85%;
+  max-width: 85%;
+  /*padding: 10% 5%;*/
 }
 
 .intro {
