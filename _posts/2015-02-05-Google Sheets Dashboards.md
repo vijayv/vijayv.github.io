@@ -5,15 +5,17 @@ thumb: Live Dashboards with Google Sheets.png
 blurb: Query a SQL database with Google Sheets for simple and effective dashboards that are easy to maintain and share.
 ---
 
-Distributing dashboards and reports to different departments at a company is a challenging task. In startup
+Distributing dashboards and reports to different departments at a small company without a big BI budget is a challenging task. In Excel, you can use a combination of a JDBC connection, a simple VB Script to refresh reports, and a shared directory to share it with the company. However, this has some limitations, especially when a majority of users are on non-Windows systems.
+
+If you are using Google Apps, however, there is a nice work around. You can use the following script to run a SQL query directly from the spreadsheet by setting the necessary document properties in Google sheets. After setting up the script, simply add a sheet to your spreadsheet called "SQL" and add your query in cell A3. You can save this file as a template and "Save As" for different queries and different reports. This makes it quite easy to build sophisticated dashboards that are cross platform, easily updatable, sharable, and very easy to maintain.
 
 ```
 // Get Db Params
 var documentProperties = PropertiesService.getScriptProperties();
-var address =  documentProperties.getProperty('dw_address');
-var user = documentProperties.getProperty('user');
-var userPwd = documentProperties.getProperty('userPwd');
-var db = documentProperties.getProperty('db');
+var address =  documentProperties.getProperty('dw_address'); // IP address of your database server
+var user = documentProperties.getProperty('user'); // database user (ensure this user only has minimum necessary)
+var userPwd = documentProperties.getProperty('userPwd'); // database user password
+var db = documentProperties.getProperty('db'); // database that you intend to use
 var dbUrl = 'jdbc:mysql://' + address + '/' + db;
 
 
@@ -109,7 +111,7 @@ function getFromDW(vtab_name, vsql, rows_to_skip) {
     } catch(e) {
       Logger.log(e.message);
       var body = Logger.getLog();
-      MailApp.sendEmail("vvelagapudi@trada.com", "DB Connection Failure", body);
+      MailApp.sendEmail("vijayv@ischool.berkeley.edu", "DB Connection Failure", body);
       throw new Error("Unable to paste data on the sheet.")
     }
 
