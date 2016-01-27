@@ -350,8 +350,10 @@ footer {
     padding: 20px 10px;
   }
 
-  .entry {
+  .entry h1, img {
     text-align: center;
+    margin: auto;
+    display: block;
   }
 }
 
