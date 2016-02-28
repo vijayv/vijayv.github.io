@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    {% if post.topic == "coding" %}
+     <div class="row">
+        <div class="post">
+          <div class="col-xs-12 col-sm-4 col-md-4 entry image">
+            {% if post.thumb %}
+              <img src="/assets/images/thumbs/{{post.thumb}}"/>
+            {% else %}
+              <img src="/assets/images/thumbs/Placeholder.png"/>
+            {% endif %}
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-8 entry content">
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            {% if post.blurb %}
+              <p>{{ post.blurb }}</p>
+            {% else %}
+              {{ post.content | truncatewords:40}}
+            {% endif %}
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

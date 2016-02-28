@@ -6,7 +6,7 @@
 name: Vijay Velagapudi
 
 # Short bio or description (displayed in the header)
-description: Data Engineer and Scientist at UC Berkeley
+description: Data Engineer/Scientist
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/vijayv/vijayv.github.io/master/images/Briefcase.png
@@ -14,6 +14,10 @@ avatar: https://raw.githubusercontent.com/vijayv/vijayv.github.io/master/images/
 #
 # Flags below are optional
 #
+
+post-types:
+  coding: coding
+  travel: travel
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -50,7 +54,7 @@ baseurl: ""
 #
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
 
 # The release of Jekyll Now that you're using

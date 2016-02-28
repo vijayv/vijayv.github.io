@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: coding
 title: Live Dashboards with Google Sheets
 thumb: Live Dashboards with Google Sheets.png
 blurb: Query a SQL database with Google Sheets for simple and effective dashboards that are easy to maintain and share.

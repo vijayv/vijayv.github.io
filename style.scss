@@ -17,11 +17,11 @@
 
 html{
   font-size: 100%;
-    /* Ensure the html element always takes up the full height of the browser window */
-    min-height:100%;
+  /* Ensure the html element always takes up the full height of the browser window */
+  min-height:100%;
 
-    /* The Magic */
-    background-size:cover;
+  /* The Magic */
+  background-size:cover;
 }
 
 body {
@@ -162,7 +162,6 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 20px;
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
@@ -259,32 +258,68 @@ nav {
 // .main
 //
 
-.entry {
-  height: 100%;
-  padding: 10px 10px;
+//
+// homepage
+//
+
+#about {
+  background-color: #eeeeee;
 }
 
-.entry .content {
-  width: 70%;
-  height: 100%;
-  float:right;
+.tile {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+#project-tile {
+  background-image: url('assets/images/tiles/project.jpg');
+}
+
+#coding-tile {
+  background-image: url('assets/images/tiles/coding.jpg');
+}
+
+#travel-tile {
+  background-image: url('assets/images/tiles/travel.jpg');
+}
+
+.tile {
+  height: 200px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile :hover {
+  background-color: #efefef;
+}
+
+.tile-text {
+  min-width: 50%;
+  text-align: center;
+  background-color: grey;
+  background:rgba(204,204,204,0.5);
+  padding: 10px;
+}
+
+.entry {
+  padding: 10px 10px;
 }
 
 .entry .content h1 {
   margin: 0;
 }
 
-.entry .image {
-  width: 30%;
-  height: 100%;
-  float:left;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.entry img{
-  max-height: 85%;
-  max-width: 85%;
+.entry img {
+  max-height: 25%;
+  max-width: auto;
 }
 
 .intro {
@@ -341,13 +376,16 @@ footer {
 
 /* Mobile Specific Settings */
 @media (max-width: 500px) {
-  
   .container {
-    padding: 20px 10px;
+    padding: 0;
+  }
+
+  .wrapper-masthead {
+    margin: 0;
   }
 
   .wrapper-masthead-container {
-    padding: 20px 10px;
+    padding: 10px;
   }
 
   .entry h1, img {

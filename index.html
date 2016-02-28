@@ -1,24 +1,40 @@
 ---
-layout: default
+layout: minimal
 ---
-
-<div class="posts">
-  {% for post in site.posts %}
-     <div class="row">
-        <article class="post">
-          <div class="col-md-4 entry image">
-              <img src="assets/images/thumbs/{{post.thumb}}"/>
-          </div>
-          <div class="col-md-8 entry content">
-            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-            {% if post.blurb %}
-              <p>{{ post.blurb }}</p>
-            {% else %}
-              {{ post.content | truncatewords:40}}
-            {% endif %}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-          </div>
-        </article>
+<div class="row">
+  <a href="{{ site.baseurl }}/projects">
+    <div class="col-xs-12 col-sm-12 col-md-4 tile" id="project-tile">
+      <div class="tile-text">
+        Projects
       </div>
-  {% endfor %}
+    </div>
+  </a>
+  <a href="{{ site.baseurl }}/coding_journal">
+    <div class="col-xs-12 col-sm-6 col-md-4 tile" id="coding-tile">
+      <div class="tile-text">
+        Coding Journal
+      </div>
+    </div>
+  </a>
+  <a href="{{ site.baseurl }}/travel">
+    <div class="col-xs-12 col-sm-6 col-md-4 tile" id="travel-tile">
+      <div class="tile-text">
+        Travel
+      </div>
+    </div>
+  </a>
+</div>
+<div id="about" class="row">
+  <div class="col-xs-12 col-md-12">
+    <p class="lead">I am a graduate student focusing on data analytics at the University of California, Berkeley.</p>
+    <p class="lead">During the summer of 2015, I interned at Facebook as a Data Engineer.</p>
+    <p class="lead">Before starting my masters program, I was a Senior Business Intelligence Analyst/Data Engineer at a startup in Boulder, CO called Trada.</p>
+
+    If I won the lottery, I would **travel** endlessly.
+    <span style="color:purple">My favorite color is purple</span>.
+    <p class="lead">My favorite musician is <a href="https://www.youtube.com/watch?feature=player_detailpage&v=kdj7RlPPQfg)">Bonobo</a>.</p>
+  </p>
+  <h4>Contact me<h4>
+  [vijayv@ischool.berkeley.edu](mailto:vijayv@ischool.berkeley.edu)
+  </div>
 </div>

@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: coding
 title: Premier League Head to Head
 thumb: Premier League Head to Head.png
 blurb: An interactive D3 chord diagram for my Information Visualization class.
