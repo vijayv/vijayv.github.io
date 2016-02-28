@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Wells Fargo Protothon
-topic: coding
+topic: project 
 thumb: Wells Fargo Protothon.jpg
 blurb: My experience winning first place in a prototyping hackathon at Wells Fargo HQ.
 ---
