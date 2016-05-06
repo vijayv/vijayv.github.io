@@ -10,7 +10,7 @@ Distributing dashboards and reports to different departments at a small company 
 
 If you are using Google Apps, however, there is a nice work around. You can use the following script to run a SQL query directly from the spreadsheet by setting the necessary document properties in Google sheets. After setting up the script, simply add a sheet to your spreadsheet called "SQL" and add your query in cell A3. You can save this file as a template and "Save As" for different queries and different reports. This makes it quite easy to build sophisticated dashboards that are cross platform, easily updatable, sharable, and very easy to maintain.
 
-```
+{% highlight javascript %}
 // Get Db Params
 var documentProperties = PropertiesService.getScriptProperties();
 var address =  documentProperties.getProperty('dw_address'); // IP address of your database server
@@ -151,4 +151,4 @@ function letterToColumn(letter)
   }
   return column;
 }
-```
+{% endhighlight %}

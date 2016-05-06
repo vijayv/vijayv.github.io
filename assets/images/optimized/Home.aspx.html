@@ -1,0 +1,479 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="stylesheet" type="text/css" href="/Content/_Reset.css" /><link rel="stylesheet" type="text/css" href="/Content/jquery-ui-1.8.14.custom.css" /><script src="/Content/jquery-1.9.1.min.js" type="text/javascript"></script><script src="/Content/jquery-ui-1.8.14.custom.min.js" type="text/javascript"></script><script src="/Content/Geeks.Scripts.js" type="text/javascript"></script><script src="/Content/Reflection.js" type="text/javascript"></script><script src="/Content/CollapsibleCheckBoxList.js" type="text/javascript"></script><script src="/Content/Geeks.jQuery.Extensions.js" type="text/javascript"></script><title>
+	Free Image Optimizer - Compress and resize photos
+</title><meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
+    <script src="/Content/Geeks.Scripts.js" type="text/javascript"></script>
+    <link href="../App_Templates/_Reset.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Mazdak.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Standard.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Menu.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Template.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="./Home.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="ctl00_DefaultScriptManager_HiddenField" id="ctl00_DefaultScriptManager_HiddenField" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIOTU5MTYxMzcPZBYCZg9kFgQCAQ9kFgICCA8WAh4HVmlzaWJsZWhkAgMPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWCAIDD2QWAgIDD2QWDAIBDxYCHgVjbGFzcwUIc2VsZWN0ZWQWAgIBDw8WAh4LTmF2aWdhdGVVcmwFCi9Ib21lLmFzcHhkZAIDDxYCHwJlFgICAQ8PFgIfAwUOL0Rvd25sb2FkLmFzcHhkZAIFDxYCHwJlFgICAQ8PFgIfAwULL1NoYXJlLmFzcHhkZAIHDxYCHwJlFgICAQ8PFgIfAwUJL0ZBUS5hc3B4ZGQCCQ8WAh8CZRYCAgEPDxYCHwMFEC9Db250YWN0LXVzLmFzcHhkZAILDxYCHwBoFgICAQ8WAh8CZRYCAgEPDxYCHwMFES9JbnRlZ3JhdGlvbi5hc3B4ZGQCBQ9kFgYCAQ9kFgQCAQ8WAh8CZRYCAgEPDxYCHwMFES9JbnRlZ3JhdGlvbi5hc3B4ZGQCAw8WAh8CZRYCAgEPDxYCHwMFHC9JbnRlZ3JhdGlvbi9Ib3ctdG8tdXNlLmFzcHhkZAIDD2QWAgIBDxYCHwJlFgICAQ8PFgIfAwUXL0ludGVncmF0aW9uL1RyaWFsLmFzcHhkZAIFD2QWBgIBDxYCHwJlFgICAQ8PFgIfAwVIL0ludGVncmF0aW9uL1B1cmNoYXNlLUFQSS5hc3B4P3R5cGU9YTQ5OTAwMjUtNmE3Ni00ZDQzLTlhYzktMDI1YmVjMzkzODUxZGQCAw8WAh8CZRYCAgEPDxYCHwMFSC9JbnRlZ3JhdGlvbi9QdXJjaGFzZS1BUEkuYXNweD90eXBlPWY2MzJhZWJkLWRiZWItNDJiZC04NjA3LTk1OTM0MmY3YTEyMWRkAgUPFgIfAmUWAgIBDw8WAh8DBUgvSW50ZWdyYXRpb24vUHVyY2hhc2UtQVBJLmFzcHg/dHlwZT1iYWVmYzBmZi00NjU3LTQxNWMtYjFhMy0wMDNmNTMyYzg2YmVkZAIHD2QWBAIDD2QWAgIBD2QWAgIFD2QWAgIFDxAPFgIeC18hRGF0YUJvdW5kZ2QPFgYCAQICAgMCBAIFAgYWBhAFEU1pbmltdW0gZmlsZSBzaXplBQIxNWcQBRRWZXJ5IHNtYWxsIGZpbGUgc2l6ZQUCMzBnEAUPU21hbGwgZmlsZSBzaXplBQI1MGcQBQZOb3JtYWwFAjYwZxAFDEhpZ2ggcXVhbGl0eQUCODBnEAUMQmVzdCBxdWFsaXR5BQI5MGdkZAIFD2QWBAIBDw8WAh8DBQ4vRG93bmxvYWQuYXNweGRkAgMPDxYCHghJbWFnZVVybAUUL0ltYWdlcy9Eb3dubG9hZC5qcGdkZAIJD2QWAmYPFQEEMjAxNmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFH2N0bDAwJE1haW4kY3RsMDIkYnRuRG93bmxvYWROb3eBFsd5CyJDwQ/nk7ZfyjaDJukoyarGyxKBpmZRfOC0nQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=JMyKukztgORbuaa7icDhFXALRsV86Imkp8Y0XY16KQ0VqBX3MlTf0K9LdHw6O45wI1c8W8MR9W4Fg1UwKfxndSLtaeSwmKaB_P3KG7gM_hU1&amp;t=635802997220000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=7JJHvjFNaD_ilEkb-fxLQ0MUaX1s1WpsYheI5hwT9Im19ALIFSrZWhCWrYTxIeMNpIHRBYJ7fkUP-PF8bLxVN09w5bHfhT3ocvpyIGC2T7K0GyTMLqX5tZdG-wJCFV98ChWQK0vmltYFfWBGG0cOtwIjadQkYIOICNej5dj4IKE1&amp;t=62fc1f78" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=chrD_5QROyW7zj8W33m3119A3SWhC8NO0UD2HBZcM43B2bDXtSvxmc7mA5G4WghPtKBVuIrla4SF-duf2FltIJ0m41Jz1Z4PNaBs5YW2rUPvv5DJhbRvw36NkaMmVqbkkbezANBMgXE7X0FYJm9EZw2&amp;t=7c776dc1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=8_MNAPzDPxwlxjU_x9vaUtKkzIdLBIhsHMRze01cnth-RWgTei2Gzhuo5Qmc0X5OTVpl8VviBXK6ZFt327VzkH8UNsIdSDXkA-CJWeQFNuH_Kkri6QUUrqLaS_LqkmR5xoHndAUbHdybaa-12cw4ug2&amp;t=7c776dc1" type="text/javascript"></script>
+<script src="/WebResource.axd?d=9q_SQQIm5FJZTZjAGgw1xJ3CfadcYqrJCzdeEkgOQOLuWYdmKSjoeMAr6bc8-WY32vljvG8eXXd4LhqFanKUXlQkVcecqGVFNv-IQdMn2Vs1&amp;t=635802997220000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="84412C77" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$DefaultScriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="website-container">
+        
+<div class="banner">
+    <a href="/"><img src="../Images/Banner.jpg" alt="" style="border-width:0px;" /></a><br />
+    
+<!-- «Start| Main menu» -->
+<div class='[#EMPTY#]'>
+  <span class='main-menu'>
+    <span class="selected">
+      <div class="item">
+        <a href="/Home.aspx">
+          Optimize Now!
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/Download.aspx">
+          Download
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/Share.aspx">
+          Share!
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/FAQ.aspx">
+          FAQ
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/Contact-us.aspx">
+          Contact us
+        </a>
+      </div>
+    </span>
+    
+  </span>
+</div>
+<!-- «End| Main menu» -->
+</div>
+
+        <div class="body">
+            
+<div class="left-column">
+    
+
+    
+</div>
+
+            
+  <div>
+    
+<!-- «Start| Image optimizer introduction» -->
+<h1>
+  Welcome to the Free Image Optimizer!
+</h1>
+<p>
+  Using this free online service, you can resize, compress and optimize your image files. Using the service is as easy as clicking of button!
+  Optimized images are better! They are more suitable for web pages, email attachments, or even storage on your disk. Give it a try now!
+</p>
+<!-- «End| Image optimizer introduction» -->
+  </div>
+  <div>
+    
+<!-- «Start| Online optimize Form» -->
+<div class="home-page-box optimize-form">
+  <div class='fixed-height-panel'>
+    <h2>
+      Optimize Now
+    </h2>
+    <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_Main_ctl01_btnOptimizeNow&#39;)">
+	
+      <div class="form">
+        <div id="ctl00_Main_ctl01_vsMessageBox" style="color:Red;display:none;">
+
+	</div>
+        <span class="form-body">
+          <div id="ctl00_Main_ctl01_groupYourImage" title="Your Image" class="box-with-left-icon">
+		
+            <h3>
+              Your Image
+            </h3>
+            <table>
+              <tr>
+                <td class="icon-cell">
+                  <img src="/Images/Module.Icons/FileIcon.gif" style="border-width:0px;" />
+                </td>
+                <td class="content-cell">
+                  <div class="item">
+                    <span class="item-body">
+                      <div class="label whole">
+                        <label for="ctl00_Main_ctl01_fuImage" id="ctl00_Main_ctl01_lblImage">
+                          Select the image file on your computer:
+                        </label>
+                      </div>
+                      <div class="input">
+                        <input type="file" name="ctl00$Main$ctl01$fuImage" id="ctl00_Main_ctl01_fuImage" />
+                        <span id="ctl00_Main_ctl01_csvImageFileType" style="color:Red;visibility:hidden;">*</span>
+                        <span id="ctl00_Main_ctl01_rqvImage" style="color:Red;visibility:hidden;">*</span>
+                      </div>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          
+	</div>
+          <div id="ctl00_Main_ctl01_groupOptimizedImage" title="Optimized image" class="box-with-left-icon">
+		
+            <h3>
+              Optimization
+            </h3>
+            <table>
+              <tr>
+                <td class="icon-cell">
+                  <img src="/Images/Module.Icons/Settings.gif" style="border-width:0px;" />
+                </td>
+                <td class="content-cell">
+                  <div class="item">
+                    <span class="item-body">
+                      <div class="label">
+                        <label for="ctl00_Main_ctl01_lstQuality" id="ctl00_Main_ctl01_lblQuality">
+                          Quality:
+                        </label>
+                      </div>
+                      <div class="input">
+                        <select name="ctl00$Main$ctl01$lstQuality" id="ctl00_Main_ctl01_lstQuality" class="number-box">
+			<option value="00000000-0000-0000-0000-000000000000">---Select---</option>
+			<option value="15">Minimum file size</option>
+			<option value="30">Very small file size</option>
+			<option value="50">Small file size</option>
+			<option selected="selected" value="60">Normal</option>
+			<option value="80">High quality</option>
+			<option value="90">Best quality</option>
+
+		</select>
+                        <span id="ctl00_Main_ctl01_rqvQuality" style="color:Red;visibility:hidden;">*</span>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item-body">
+                      <div class="label">
+                        <label for="ctl00_Main_ctl01_txtMaxWidth" id="ctl00_Main_ctl01_lblMaxWidth">
+                          Max width:
+                        </label>
+                      </div>
+                      <div class="input">
+                        <input name="ctl00$Main$ctl01$txtMaxWidth" type="text" value="1200" maxlength="5" id="ctl00_Main_ctl01_txtMaxWidth" class="number-box" />
+                        <span id="ctl00_Main_ctl01_rqvMaxWidth" style="color:Red;visibility:hidden;">*</span>
+                        <span id="ctl00_Main_ctl01_rnvMaxWidth" style="color:Red;visibility:hidden;">*</span>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item-body">
+                      <div class="label">
+                        <label for="ctl00_Main_ctl01_txtMaxHeight" id="ctl00_Main_ctl01_lblMaxHeight">
+                          Max height:
+                        </label>
+                      </div>
+                      <div class="input">
+                        <input name="ctl00$Main$ctl01$txtMaxHeight" type="text" value="900" maxlength="5" id="ctl00_Main_ctl01_txtMaxHeight" class="number-box" />
+                        <span id="ctl00_Main_ctl01_rqvMaxHeight" style="color:Red;visibility:hidden;">*</span>
+                        <span id="ctl00_Main_ctl01_rnvMaxHeight" style="color:Red;visibility:hidden;">*</span>
+                      </div>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          
+	</div>
+        </span>
+        <div class="buttons">
+          <input type="submit" name="ctl00$Main$ctl01$btnOptimizeNow" value="Optimize Now!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Main$ctl01$btnOptimizeNow&quot;, &quot;&quot;, true, &quot;OnlineOptimizeRequest&quot;, &quot;&quot;, false, false))" id="ctl00_Main_ctl01_btnOptimizeNow" class="button" />
+        </div>
+      </div>
+      <script type="text/javascript">
+     function ValidatefuImage(s, args)
+     {
+         var control = $("input[type=file]", $(s).parent()).get(0).value;
+         
+         if (control.indexOf('.') == -1)
+         {
+             args.IsValid = false;
+         }
+         else
+         {
+             var extention = control.substring(1 + control.lastIndexOf('.')).toLowerCase();
+             args.IsValid = extention == 'jpg' || extention == 'jpeg' || extention == 'gif' || extention == 'png' || extention == 'bmp' || extention == 'tiff';
+         }
+     }
+</script>
+    
+</div>
+  </div>
+</div>
+<!-- «End| Online optimize Form» -->
+  </div>
+  <div>
+    
+<!-- «Start| Download optimizer promotion» -->
+<div class="home-page-box">
+  <div class="fixed-height-panel">
+    <h2>
+      Download Free!
+    </h2>
+    <br/>
+    <p>
+      You can now download image optimizer on your computer and resize and compress your images with a single click!
+    </p>
+    <h3>
+      Why should I download?
+    </h3>
+    <ul>
+      <li>
+        It's super fast!
+      </li>
+      <li>
+        Compress images in bulk!
+      </li>
+      <li>
+        It's Absolutely Free!
+      </li>
+      <li>
+        <a id="ctl00_Main_ctl02_btnReasonsToDownload" href="/Download.aspx">More reasons...</a>
+      </li>
+    </ul>
+    <a href="/Download.aspx"><img style="border=0px;" name="ctl00$Main$ctl02$btnDownloadNow" id="ctl00_Main_ctl02_btnDownloadNow" class="button" src="/Images/Download.jpg" alt="Download Now!" style="border-width:0px;" /></a>
+  </div>
+</div>
+<!-- «End| Download optimizer promotion» -->
+  </div>
+
+        </div>
+    </div>
+    
+<div class="footer">
+    <hr />
+    Copyright&nbsp;&copy;&nbsp;2016 ImageOptimizer.Net - All rights reserved<br>
+    A product of Geeks Ltd, <a href="http://www.geeks.ltd.uk/home.html">Software Development
+        company in London</a></div>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_Main_ctl01_vsMessageBox"));
+var Page_Validators =  new Array(document.getElementById("ctl00_Main_ctl01_csvImageFileType"), document.getElementById("ctl00_Main_ctl01_rqvImage"), document.getElementById("ctl00_Main_ctl01_rqvQuality"), document.getElementById("ctl00_Main_ctl01_rqvMaxWidth"), document.getElementById("ctl00_Main_ctl01_rnvMaxWidth"), document.getElementById("ctl00_Main_ctl01_rqvMaxHeight"), document.getElementById("ctl00_Main_ctl01_rnvMaxHeight"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_Main_ctl01_vsMessageBox = document.all ? document.all["ctl00_Main_ctl01_vsMessageBox"] : document.getElementById("ctl00_Main_ctl01_vsMessageBox");
+ctl00_Main_ctl01_vsMessageBox.showmessagebox = "True";
+ctl00_Main_ctl01_vsMessageBox.showsummary = "False";
+ctl00_Main_ctl01_vsMessageBox.validationGroup = "OnlineOptimizeRequest";
+var ctl00_Main_ctl01_csvImageFileType = document.all ? document.all["ctl00_Main_ctl01_csvImageFileType"] : document.getElementById("ctl00_Main_ctl01_csvImageFileType");
+ctl00_Main_ctl01_csvImageFileType.controltovalidate = "ctl00_Main_ctl01_fuImage";
+ctl00_Main_ctl01_csvImageFileType.errormessage = "Please upload a jpg, jpeg, gif, png, bmp or tiff file for Image.";
+ctl00_Main_ctl01_csvImageFileType.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_csvImageFileType.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_Main_ctl01_csvImageFileType.clientvalidationfunction = "ValidatefuImage";
+var ctl00_Main_ctl01_rqvImage = document.all ? document.all["ctl00_Main_ctl01_rqvImage"] : document.getElementById("ctl00_Main_ctl01_rqvImage");
+ctl00_Main_ctl01_rqvImage.controltovalidate = "ctl00_Main_ctl01_fuImage";
+ctl00_Main_ctl01_rqvImage.errormessage = "Please provide a value for Image.";
+ctl00_Main_ctl01_rqvImage.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rqvImage.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rqvImage.initialvalue = "";
+var ctl00_Main_ctl01_rqvQuality = document.all ? document.all["ctl00_Main_ctl01_rqvQuality"] : document.getElementById("ctl00_Main_ctl01_rqvQuality");
+ctl00_Main_ctl01_rqvQuality.controltovalidate = "ctl00_Main_ctl01_lstQuality";
+ctl00_Main_ctl01_rqvQuality.errormessage = "Please provide a value for Quality.";
+ctl00_Main_ctl01_rqvQuality.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rqvQuality.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rqvQuality.initialvalue = "00000000-0000-0000-0000-000000000000";
+var ctl00_Main_ctl01_rqvMaxWidth = document.all ? document.all["ctl00_Main_ctl01_rqvMaxWidth"] : document.getElementById("ctl00_Main_ctl01_rqvMaxWidth");
+ctl00_Main_ctl01_rqvMaxWidth.controltovalidate = "ctl00_Main_ctl01_txtMaxWidth";
+ctl00_Main_ctl01_rqvMaxWidth.errormessage = "Please provide a value for Max width.";
+ctl00_Main_ctl01_rqvMaxWidth.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rqvMaxWidth.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rqvMaxWidth.initialvalue = "";
+var ctl00_Main_ctl01_rnvMaxWidth = document.all ? document.all["ctl00_Main_ctl01_rnvMaxWidth"] : document.getElementById("ctl00_Main_ctl01_rnvMaxWidth");
+ctl00_Main_ctl01_rnvMaxWidth.controltovalidate = "ctl00_Main_ctl01_txtMaxWidth";
+ctl00_Main_ctl01_rnvMaxWidth.errormessage = "Max width must be in the range of 100 to 10000.";
+ctl00_Main_ctl01_rnvMaxWidth.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rnvMaxWidth.type = "Integer";
+ctl00_Main_ctl01_rnvMaxWidth.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rnvMaxWidth.maximumvalue = "10000";
+ctl00_Main_ctl01_rnvMaxWidth.minimumvalue = "100";
+var ctl00_Main_ctl01_rqvMaxHeight = document.all ? document.all["ctl00_Main_ctl01_rqvMaxHeight"] : document.getElementById("ctl00_Main_ctl01_rqvMaxHeight");
+ctl00_Main_ctl01_rqvMaxHeight.controltovalidate = "ctl00_Main_ctl01_txtMaxHeight";
+ctl00_Main_ctl01_rqvMaxHeight.errormessage = "Please provide a value for Max height.";
+ctl00_Main_ctl01_rqvMaxHeight.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rqvMaxHeight.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rqvMaxHeight.initialvalue = "";
+var ctl00_Main_ctl01_rnvMaxHeight = document.all ? document.all["ctl00_Main_ctl01_rnvMaxHeight"] : document.getElementById("ctl00_Main_ctl01_rnvMaxHeight");
+ctl00_Main_ctl01_rnvMaxHeight.controltovalidate = "ctl00_Main_ctl01_txtMaxHeight";
+ctl00_Main_ctl01_rnvMaxHeight.errormessage = "Max height must be in the range of 100 to 10000.";
+ctl00_Main_ctl01_rnvMaxHeight.validationGroup = "OnlineOptimizeRequest";
+ctl00_Main_ctl01_rnvMaxHeight.type = "Integer";
+ctl00_Main_ctl01_rnvMaxHeight.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_Main_ctl01_rnvMaxHeight.maximumvalue = "10000";
+ctl00_Main_ctl01_rnvMaxHeight.minimumvalue = "100";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_DefaultScriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ctl00_Main_ctl01_vsMessageBox');
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+WebForm_AutoFocus('ctl00_Main_ctl01_lstQuality');
+document.getElementById('ctl00_Main_ctl01_csvImageFileType').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_csvImageFileType'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rqvImage').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rqvImage'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rqvQuality').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rqvQuality'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rqvMaxWidth').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rqvMaxWidth'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rnvMaxWidth').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rnvMaxWidth'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rqvMaxHeight').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rqvMaxHeight'));
+}
+
+document.getElementById('ctl00_Main_ctl01_rnvMaxHeight').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_Main_ctl01_rnvMaxHeight'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4013727-4");
+        pageTracker._trackPageview();
+    </script>
+    <!-- Cookie Control -->
+    <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="/Content/cookieControl-4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">//<![CDATA[
+        cookieControl({
+            introText: "<p>The cookies on this site are essential, and the site won't work as expected without them. These cookies are set when you navigate to the site, submit a form, login or interact with the site.</p>",
+            fullText: "",
+            position: 'left', // left or right
+            shape: 'triangle', // triangle or diamond
+            theme: 'light', // light or dark
+            startOpen: true,
+            autoHide: 6000,
+            subdomains: true,
+            onAccept: function () { }, // NOTE: we don't stop the analytics before user accepts. Instead we advise them to leave if they don't want this.
+            onReady: function () { },
+            onCookiesAllowed: function () { },
+            onCookiesNotAllowed: function () { },
+            countries: 'United Kingdom' // Or supply a list ['United Kingdom', 'Greece']
+        });
+       //]]>
+    </script>
+</body>
+</html>

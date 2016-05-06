@@ -9,7 +9,7 @@ name: Vijay Velagapudi
 description: Data Engineer/Scientist
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/vijayv/vijayv.github.io/master/images/Briefcase.png
+avatar: https://raw.githubusercontent.com/vijayv/vijayv.github.io/master/assets/images/Briefcase.png
 
 #
 # Flags below are optional
@@ -17,7 +17,7 @@ avatar: https://raw.githubusercontent.com/vijayv/vijayv.github.io/master/images/
 
 post-types:
   coding: coding
-  travel: travel
+  dataviz: dataviz
 
 # Includes an icon in the footer for each username you enter
 footer-links:
