@@ -75,3 +75,5 @@ exclude:
     - Gemfile.lock
     - LICENSE
     - README.md
+    - node_modules
+    - assets/images/originals
