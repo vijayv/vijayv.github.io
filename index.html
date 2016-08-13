@@ -1,39 +1,27 @@
 ---
 layout: default
 ---
-<div class="row">
-  <a href="{{ site.baseurl }}/projects">
-    <div class="col-xs-12 col-sm-12 col-md-4 tile" id="project-tile">
-      <div class="tile-text">
-        Projects
+<div class="posts">
+  {% for post in site.posts %}
+   <div class="row">
+      <div class="post">
+        <div class="entry image">
+          {% if post.thumb %}
+            <img src="/assets/images/thumbs/{{post.thumb}}"/>
+          {% else %}
+            <img src="/assets/images/thumbs/Placeholder.png"/>
+          {% endif %}
+        </div>
+        <div class="entry content">
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          {% if post.blurb %}
+            <p>{{ post.blurb }}</p>
+          {% else %}
+            {{ post.content | truncatewords:40}}
+          {% endif %}
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </div>
       </div>
     </div>
-  </a>
-  <a href="{{ site.baseurl }}/coding">
-    <div class="col-xs-12 col-sm-6 col-md-4 tile" id="coding-tile">
-      <div class="tile-text">
-        Coding
-      </div>
-    </div>
-  </a>
-  <a href="{{ site.baseurl }}/data">
-    <div class="col-xs-12 col-sm-6 col-md-4 tile" id="travel-tile">
-      <div class="tile-text">
-        Data
-      </div>
-    </div>
-  </a>
-</div>
-<div id="about" class="row">
-  <div class="col-xs-12 col-md-12">
-    <p class="lead">I am a graduate student focusing on data science at the University of California, <a href="http://www.ischool.berkeley.edu/programs/mims">Berkeley School of Information.</a></p>
-    <p class="lead">During the summer of 2015, I interned at Facebook as a Data Engineer.</p>
-    <p class="lead">Before starting my masters program, I was a Senior Business Intelligence Analyst/Data Engineer at a startup in Boulder, CO called Trada.</p>
-  </div>
-  <div class="col-xs-12 col-md-6">
-    <img src="{{ site.baseurl }}/assets/images/me.JPG" alt="this is vijay" />
-  </div>
-  <h4>Contact me<h4>
-  vijayv@ischool.berkeley.edu
-  </div>
+  {% endfor %}
 </div>
