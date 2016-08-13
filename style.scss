@@ -33,7 +33,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1400px;
   padding: 40px 100px;
   width: 100%;
   background-color:rgba(255,255,255,.8);
@@ -350,6 +350,10 @@ footer {
 
   .wrapper-masthead-container {
     padding: 10px;
+  }
+
+  .avatar {
+    display: none;
   }
 
   .entry h1, img {

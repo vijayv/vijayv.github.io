@@ -15,31 +15,34 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="wrapper-masthead-container">
-        <header class="masthead clearfix">
-          <nav>
-            <a href="{{ site.baseurl }}/projects">Project</a>
-            <a href="{{ site.baseurl }}/coding">Coding</a>
-            <a href="{{ site.baseurl }}/data">Data</div></a>
-          </nav>
-       </header>
-      </div>
-    </div>
-
     <div id="main" role="main" class="container">
-      <div id="sidebar" role="sidebar" class="col-sm-3">
-          <div class="site-info">
-            <img class="avatar" src="https://www.gravatar.com/avatar/a124b89b5cb44f4ff5041f8626dfeb46"/>
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-            <div class="profile-links">
-              {% include svg-icons.html %}
-            </div>
+      <div class="row">
+        <div class="wrapper-masthead">
+          <div class="wrapper-masthead-container">
+            <header class="masthead clearfix">
+              <nav>
+                <a href="{{ site.baseurl }}/">Home</a>
+                <a href="{{ site.baseurl }}/about">About</a>
+                <a href="https://drive.google.com/open?id=0B1iTR9pl1WfvdWdQMjN6dHBueEE">Resume</a>
+              </nav>
+           </header>
           </div>
+        </div>
       </div>
-      <div id="content" role="content" class="col-sm-9">
-        {{ content }}
+      <div class="row">
+        <div id="sidebar" role="sidebar" class="col-sm-3">
+            <div class="site-info">
+              <img class="avatar" src="https://www.gravatar.com/avatar/a124b89b5cb44f4ff5041f8626dfeb46?s=150"/>
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              <p class="site-description">{{ site.description }}</p>
+              <div class="profile-links">
+                {% include svg-icons.html %}
+              </div>
+            </div>
+        </div>
+        <div id="content" role="content" class="col-sm-9">
+          {{ content }}
+        </div>
       </div>
     </div>
 
