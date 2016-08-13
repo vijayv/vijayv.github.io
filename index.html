@@ -5,20 +5,9 @@ layout: default
   {% for post in site.posts %}
    <div class="row">
       <div class="post">
-        <div class="entry image">
-          {% if post.thumb %}
-            <img src="/assets/images/optimized/{{post.thumb}}"/>
-          {% else %}
-            <img src="/assets/images/optimized/Placeholder.png"/>
-          {% endif %}
-        </div>
         <div class="entry content">
           <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-          {% if post.blurb %}
-            <p>{{ post.blurb }}</p>
-          {% else %}
-            {{ post.content | truncatewords:40}}
-          {% endif %}
+          {{ post.content | truncatewords:100 }}
           <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </div>
       </div>
