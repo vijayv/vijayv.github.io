@@ -27,7 +27,7 @@ html{
 body {
   /* Workaround for some mobile browsers */
   min-height:100%;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $merriweather;
   color: $darkGray;
 }
 
@@ -39,10 +39,15 @@ body {
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
+
+  @include mobile {
+    padding: 0 30px;
+    margin: 30px auto;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $lato;
   color: $darkerGray;
   font-weight: bold;
 
@@ -201,6 +206,10 @@ img {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .site-info {
@@ -218,7 +227,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $lato;
   font-weight: 300;
   font-size: 25px;
   letter-spacing: 1px;
@@ -226,6 +235,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
+  font-family: $lato;
   color: $gray;
   font-size: 14px;
 
@@ -236,7 +246,7 @@ img {
 
 nav {
   margin-top: 23px;
-  font-family: $helveticaNeue;
+  font-family: $lato;
   font-size: 16px;
 
   @include mobile {
@@ -274,6 +284,11 @@ nav {
 
 .entry {
   padding: 10px 10px;
+
+  @include mobile {
+    margin: 20px 0;
+    border-top: 3px solid $gray;
+  }
 }
 
 .entry .content h1 {
@@ -291,6 +306,10 @@ nav {
 
 .posts {
   margin-left: 30px;
+
+  @include mobile {
+    margin-left: 0px;
+  }
 }
 
 .posts > .post {
@@ -343,27 +362,6 @@ footer {
 
 /* Mobile Specific Settings */
 @media (max-width: 767px) {
-  .container {
-    padding: 0 30px;
-    margin: 30px auto;
-  }
-
-  .wrapper-masthead {
-    margin: 0;
-  }
-
-  .wrapper-masthead-container {
-    padding: 10px;
-  }
-
-  .avatar {
-    display: none;
-  }
-
-  .entry {
-    margin: 20px 0;
-    border-top: 3px solid #eeeeee;
-  }
 
   .entry h1 {
     margin: 10px 0;
@@ -372,10 +370,6 @@ footer {
 
   .affix {
     position: static;
-  }
-
-  .posts {
-    margin-left: 0px;
   }
 }
 
