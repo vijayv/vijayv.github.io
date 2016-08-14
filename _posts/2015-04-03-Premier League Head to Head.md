@@ -26,7 +26,7 @@ fill-opacity: .5;
 <body>
 
 <div id="title">
-  <p class="lead">A d3 chord diagram of the English Premier League's top 5 (arguably) teams and the number of wins they've recorded over each other in their respective histories.</p>
+  <p>A d3 chord diagram of the English Premier League's top 5 (arguably) teams and the number of wins they've recorded over each other in their respective histories.</p>
 </div>
 
 <div id="instructions">
