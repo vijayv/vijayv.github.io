@@ -1,9 +1,6 @@
 ---
 layout: post
-topic: coding
 title: Live Dashboards with Google Sheets
-thumb: Live Dashboards with Google Sheets.png
-blurb: Query a SQL database with Google Sheets for simple and effective dashboards that are easy to maintain and share.
 ---
 
 Distributing dashboards and reports to different departments at a small company without a big BI budget is a challenging task. In Excel, you can use a combination of a JDBC connection, a simple VB Script to refresh reports, and a shared directory to share it with the company. However, this has some limitations, especially when a majority of users are on non-Windows systems.

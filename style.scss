@@ -34,7 +34,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 40px 100px;
+  padding: 40px 40px;
   width: 100%;
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
@@ -197,11 +197,11 @@ img {
   }
 }
 
-  .avatar {
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    }
+.avatar {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
 
 .site-info {
   text-align: center;
@@ -235,8 +235,7 @@ img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 23px;
   font-family: $helveticaNeue;
   font-size: 16px;
 
@@ -269,8 +268,8 @@ nav {
 // homepage
 //
 
-#about {
-  background-color: #eeeeee;
+.content {
+  max-width: 700px;
 }
 
 .entry {
@@ -288,6 +287,10 @@ nav {
 
 .intro {
   font-size: 1.1em;
+}
+
+.posts {
+  margin-left: 30px;
 }
 
 .posts > .post {
@@ -341,7 +344,7 @@ footer {
 /* Mobile Specific Settings */
 @media (max-width: 500px) {
   .container {
-    padding: 0;
+    padding: 0 30px;
   }
 
   .wrapper-masthead {
@@ -356,10 +359,22 @@ footer {
     display: none;
   }
 
-  .entry h1, img {
-    text-align: center;
-    margin: auto;
+  .entry {
+    margin: 20px 0;
+    border-top: 3px solid #eeeeee;
+  }
+
+  .entry h1 {
+    margin: 10px 0;
     display: block;
+  }
+
+  .affix {
+    position: static;
+  }
+
+  .posts {
+    margin-left: 0px;
   }
 }
 

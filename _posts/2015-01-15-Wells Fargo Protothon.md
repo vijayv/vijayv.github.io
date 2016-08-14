@@ -1,12 +1,7 @@
 ---
 layout: post
 title: Wells Fargo Protothon
-topic: project 
-thumb: Wells Fargo Protothon.jpg
-blurb: My experience winning first place in a prototyping hackathon at Wells Fargo HQ.
 ---
-
-![_config.yml]({{ site.baseurl }}/assets/images/optimized/wellsfargo/wellsfargo_vijay_bigcheck.jpg)
 
 Leaving a job and company that I loved to come to grad school was an incredibly difficult decision; in fact, it was so difficult, I lingered on it for several years! Part of the appeal of grad school is that it allows for time and opportunities that may not be available while working full time. I wanted to take full advantage of this fact during my time at Berkeley.
 
@@ -19,4 +14,4 @@ We got some nice press as well:
 * [Millennials Create Remedies for Improving Their Financial Health](http://stories.wellsfargobank.com/millennials-create-remedies-improving-financial-health/?cid=facebook)
 * [I School](http://www.ischool.berkeley.edu/newsandevents/news/20141208wellsfargoprotothon)
 
-![_config.yml]({{ site.baseurl }}/images/wellsfargo/wellsfargoprotothon2014.jpg)
+![_config.yml]({{ site.baseurl }}/assets/images/optimized/wellsfargoprotothon2014.jpg)

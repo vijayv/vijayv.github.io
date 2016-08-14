@@ -6,7 +6,10 @@ layout: default
    <div class="row">
       <div class="post">
         <div class="entry content">
-          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          <div class="date">
+              Written on {{ post.date | date: "%B %e, %Y" }}
+          </div>
           {{ post.content | truncatewords:100 }}
           <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </div>
