@@ -34,7 +34,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 40px 40px;
+  padding: 20px 40px;
   width: 100%;
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
@@ -213,8 +213,8 @@ img {
 }
 
 .site-info {
+  padding: 20px 0;
   text-align: center;
-
 
   @include mobile {
     float: none;
