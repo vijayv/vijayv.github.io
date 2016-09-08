@@ -27,7 +27,7 @@ So, what if we intervened at the right moment, with a simple question based on t
 >
 > <img alt="Question Intervention" src="{{ site.baseurl }}/assets/images/optimized/the-gadfly-project-question.png" style="max-height: 300px"/>
 
-Petarnalistic, you say?
+Paternalistic, you say?
 
 Perhaps, but, less so than removing comment sections altogether [as many publications have done](http://google.com).
 
