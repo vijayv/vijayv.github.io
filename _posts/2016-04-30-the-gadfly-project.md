@@ -29,7 +29,7 @@ So, what if we intervened at the right moment, with a simple question based on t
 
 Paternalistic, you say?
 
-Perhaps, but, less so than removing comment sections altogether [as many publications have done](http://google.com).
+Perhaps, but, less so than removing comment sections altogether [as many publications have done](http://www.npr.org/sections/ombudsman/2016/08/17/489516952/npr-website-to-get-rid-of-comments).
 
 ## This sounds great/terrible, where can I find out more?
 
