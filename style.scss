@@ -8,7 +8,6 @@
 @import "_reset";
 @import "_variables";
 // Syntax highlighting @import is at the bottom of this file
-@import "_bootstrap";
 
 
 /**************/
@@ -32,10 +31,6 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 20px 40px;
-  width: 100%;
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
@@ -245,9 +240,10 @@ img {
 }
 
 nav {
-  margin-top: 23px;
   font-family: $lato;
   font-size: 16px;
+  background-color: inherit;
+  box-shadow: none;
 
   @include mobile {
     float: none;
@@ -257,7 +253,7 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 10px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
