@@ -117,10 +117,6 @@ strong, b {
   font-weight: bold;
 }
 
-img {
-  max-width: 100%;
-}
-
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -289,11 +285,6 @@ nav {
 
 .entry .content h1 {
   margin: 0;
-}
-
-.entry img {
-  max-height: 15%;
-  max-width: auto;
 }
 
 .intro {
