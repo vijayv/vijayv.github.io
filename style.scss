@@ -41,6 +41,10 @@ body {
   }
 }
 
+.container-wide {
+  width: 95%;
+}
+
 .card-image > img {
   max-height: 240px;
 }
@@ -356,6 +360,21 @@ footer {
   margin: 20px;
 }
 
+// Projects
+.cards-container {
+  column-break-inside: avoid;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  .card {
+    display: inline-block;
+    overflow: visible;
+  }
+}
+
+.tags {
+  margin-top: 10px;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
