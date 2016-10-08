@@ -47,6 +47,7 @@ body {
 
 .card-image > img {
   max-height: 240px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -360,15 +361,23 @@ footer {
   margin: 20px;
 }
 
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
 // Projects
 .cards-container {
   column-break-inside: avoid;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+  @include column-count(3);
   .card {
     display: inline-block;
     overflow: visible;
+  }
+
+  @include mobile {
+    @include column-count(1);
   }
 }
 
