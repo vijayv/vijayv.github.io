@@ -1,21 +1,23 @@
 ---
-layout: default-wide
+layout: default
 ---
 <div class="posts">
+  <div class="col s12">
   {% for post in site.posts %}
     {% if post.type != 'project' %}
-      <div class="row">
-        <div class="post">
-          <div class="entry content">
-            <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-            <div class="date">
-                Written on {{ post.date | date: "%B %e, %Y" }}
-            </div>
-            {{ post.content | truncatewords:100 }}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <div class="card large">
+        <div class="card-content">
+          <a href="{{ site.baseurl }}{{ post.url }}"><span class="card-title grey-text text-darken-4">{{ post.title }}</span></a>
+          <p>{{ post.content | truncatewords:50 }}</p>
+          <div class="tags">
+            <div class="chip">NLP</div>
           </div>
         </div>
-      </div>
+        <div class="card-action right-align">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </div>
+      </div>  
     {% endif %}
   {% endfor %}
+  </div>
 </div>

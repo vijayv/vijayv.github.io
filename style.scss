@@ -35,15 +35,12 @@ body {
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
   margin: 40px auto;
+  width: 95%;
 
   @include mobile {
     padding: 0 20px;
     margin: 20px auto;
   }
-}
-
-.container-wide {
-  width: 95%;
 }
 
 .card-image > img {
@@ -379,10 +376,16 @@ footer {
   column-count: $ct;
 }
 
+.card.large {
+  width: 80%;
+  height: 350px;
+}
+
 // Projects
 .cards-container {
   column-break-inside: avoid;
   @include column-count(3);
+  
   .card {
     display: inline-block;
     overflow: visible;
