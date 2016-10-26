@@ -34,10 +34,11 @@ body {
   background-color:rgba(255,255,255,.8);
   -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
+  margin: 40px auto;
 
   @include mobile {
-    padding: 0 30px;
-    margin: 30px auto;
+    padding: 0 20px;
+    margin: 20px auto;
   }
 }
 
@@ -193,6 +194,8 @@ strong, b {
 
   @include mobile {
     float: none;
+    width: 30px;
+    height: 30px;
     display: block;
     margin: 0 auto;
   }
@@ -203,13 +206,18 @@ strong, b {
 }
 
 .site-info {
-  padding: 20px 0;
+  padding: 10px 0 0 0;
   text-align: center;
 
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
+    
+    img {
+      display: none;
+    }
+  
   }
 }
 
