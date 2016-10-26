@@ -3,17 +3,19 @@ layout: default
 ---
 <div class="posts">
   {% for post in site.posts %}
-   <div class="row">
-      <div class="post">
-        <div class="entry content">
-          <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-          <div class="date">
-              Written on {{ post.date | date: "%B %e, %Y" }}
+    {% if post.type != 'project' %}
+      <div class="row">
+        <div class="post">
+          <div class="entry content">
+            <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <div class="date">
+                Written on {{ post.date | date: "%B %e, %Y" }}
+            </div>
+            {{ post.content | truncatewords:100 }}
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
           </div>
-          {{ post.content | truncatewords:100 }}
-          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </div>
       </div>
-    </div>
+    {% endif %}
   {% endfor %}
 </div>

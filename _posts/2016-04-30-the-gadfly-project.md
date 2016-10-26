@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Gadfly Project
+type: project
 ---
 
 For my masters project, I worked with a team of five people to create an automatic, extensible, question generation service. Why would I want to automatically generate questions from text, you ask? 
