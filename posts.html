@@ -7,11 +7,8 @@ layout: default
     {% if post.type != 'project' %}
       <div class="card large">
         <div class="card-content">
-          <a href="{{ site.baseurl }}{{ post.url }}"><span class="card-title grey-text text-darken-4">{{ post.title }}</span></a>
-          <p>{{ post.content | truncatewords:50 }}</p>
-          <div class="tags">
-            <div class="chip">NLP</div>
-          </div>
+          <a href="{{ site.baseurl }}{{ post.url }}"><h1><span class="card-title grey-text text-darken-4">{{ post.title }}</span></h1></a>
+          <p>{{ post.content | truncatewords:60 }}</p>
         </div>
         <div class="card-action right-align">
           <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>

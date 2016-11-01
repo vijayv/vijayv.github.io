@@ -1,5 +1,5 @@
 ---
-layout: default-wide
+layout: default
 title: Premier League Head to Head
 type: project
 ---
