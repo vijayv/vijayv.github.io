@@ -170,7 +170,7 @@ strong, b {
   img {
     max-width: 100%;
   }
-  
+
   @include mobile {
     width: 100%;
   }
@@ -182,6 +182,9 @@ strong, b {
   margin: 0 auto;
   padding: 10px 0 0 0;
   width: 20%;
+  position: -webkit-sticky;  // required for Safari
+  position: sticky;
+  /*top: 0;*/
 
   @include mobile {
     width: 100%;
@@ -280,9 +283,12 @@ nav {
   }
 }
 
-
 .card.large {
   width: 100%;
+}
+
+.card.tall {
+  height: 300px;
 }
 
 .card-title {
@@ -303,6 +309,45 @@ nav {
 #resume-card {
   background: url('./assets/images/optimized/book.jpeg') no-repeat center center;
   background-size: 100%;
+}
+
+/* Projects page */
+.project-card {
+  margin-bottom: 5px;
+  border-bottom: 1px $darkGray solid;
+  padding: 5px 10px;
+  
+ img {
+   display: block;
+   margin: 0 auto;
+   position: static;
+ }
+
+ p {
+   fill-opacity: .6em;
+   background: $darkGray;
+   padding: 15px;
+   color: $white;
+   position: relative;
+ }
+}
+
+.tags {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+}
+
+.chip {
+  border: 1px $lightGray solid;
+  background: $lightGray;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: .85em;
+  font-style: $helveticaNeue;
+  margin: 2px;
 }
 
 .entry {
@@ -393,26 +438,6 @@ footer {
   -webkit-column-count: $ct;
   -moz-column-count: $ct;
   column-count: $ct;
-}
-
-
-// Projects
-.cards-container {
-  column-break-inside: avoid;
-  @include column-count(3);
-  
-  .card {
-    display: inline-block;
-    overflow: visible;
-  }
-
-  @include mobile {
-    @include column-count(1);
-  }
-}
-
-.tags {
-  margin-top: 10px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
