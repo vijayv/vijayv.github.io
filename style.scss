@@ -161,7 +161,7 @@ strong, b {
 }
 
 #content {
-  width: 70%;
+  width: 75%;
   max-width: 700px;
   margin: 0px auto;
   display: flex;
@@ -169,6 +169,10 @@ strong, b {
 
   img {
     max-width: 100%;
+  }
+  
+  @include mobile {
+    width: 100%;
   }
 }
 
@@ -188,16 +192,12 @@ strong, b {
 .site-avatar {
   img {
     margin: 0 auto;
-    border-radius: 40px;
+    border-radius: 50px;
   }
 
   @include mobile {
     display: none;
   }
-}
-
-.site-info {
-  
 }
 
 .site-name {
@@ -253,23 +253,56 @@ nav {
 //
 
 .card {
+  height: 240px;
+  overflow: hidden;
   width: 50%;
-  padding: 1px;
+  margin: 1px 0;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
+    color: $white;
+    line-height: 240px; // Must be same as parent div height
+  }
+  
+  &:hover {
+    background: #ff7b29;
+    // animation: fade-in($color: white, $amount: 50);
+    // animation-duration: 100;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
 }
+
 
 .card.large {
   width: 100%;
 }
 
-.card-image {
-  height: 240px;
-  overflow: hidden;
-  
-  img {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-  }
+.card-title {
+  color: $white;
+  z-index: -1;
+}
+
+#projects-card {
+  background: url('./assets/images/optimized/project.jpg') no-repeat center center;
+  background-size: 100%;
+}
+
+#about-card {
+  background: url('./assets/images/optimized/travel.jpg') no-repeat center center;
+  background-size: 100%;
+}
+
+#resume-card {
+  background: url('./assets/images/optimized/book.jpeg') no-repeat center center;
+  background-size: 100%;
 }
 
 .entry {
