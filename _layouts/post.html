@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div class="post">
-    <div class="entry content">
-      <h1 class="post-title">{{ page.title }}</h1>
-      {{ content }}
-    </div>
-    {% include disqus.html disqus_identifier=page.disqus_identifier %}
+<div class="post">
+  <div class="entry content">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {{ content }}
   </div>
-  <a href="{{ site.baseurl }}/projects">Back</a>
+  {% include disqus.html disqus_identifier=page.disqus_identifier %}
 </div>
+<a href="{{ site.baseurl }}/projects">Back</a>

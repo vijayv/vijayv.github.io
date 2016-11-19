@@ -174,6 +174,7 @@ strong, b {
 
   @include mobile {
     width: 100%;
+    margin-top: 15px;
   }
 }
 
@@ -183,9 +184,6 @@ strong, b {
   margin: 0 auto;
   padding: 10px 0 0 0;
   width: 20%;
-  position: -webkit-sticky;  // required for Safari
-  position: sticky;
-  /*top: 0;*/
 
   @include mobile {
     width: 100%;
@@ -257,13 +255,21 @@ nav {
 //
 
 .card {
-  height: 240px;
+  /*height: 240px;*/
   overflow: hidden;
-  width: 50%;
-  margin: 1px 0;
+  width: 49%;
+  margin: 1px .5%;
   text-align: center;
-  display: inline-block;
+  display: block;
   position: relative;
+  transition-duration: .5s;
+
+  a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+  }
 
   span {
     display: inline-block;
@@ -274,9 +280,10 @@ nav {
   }
   
   &:hover {
-    background: #ff7b29;
-    // animation: fade-in($color: white, $amount: 50);
-    // animation-duration: 100;
+    transform: scale(1.03);
+    transition-duration: 1s;
+    background: $darkGray;
+    opacity: .5;
   }
 
   @include mobile {
@@ -286,10 +293,6 @@ nav {
 
 .card.large {
   width: 100%;
-}
-
-.card.tall {
-  height: 300px;
 }
 
 .card-title {
@@ -341,7 +344,7 @@ nav {
  }
 
  @include mobile {
-   border-bottom: 3px $lightGray solid;
+   box-shadow: 2px 2px 1px $lightGray;
 
    h1, h2, h3 {
      text-align: center;
@@ -371,12 +374,12 @@ nav {
   margin: 2px;
 }
 
+// Post
 .entry {
   padding: 10px 10px;
 
   @include mobile {
     margin: 20px 0;
-    border-top: 3px solid $gray;
   }
 }
 
@@ -384,23 +387,7 @@ nav {
   margin: 0;
 }
 
-.posts > .post {
-  padding-bottom: 1em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
 .post {
-  margin-left: 30px;
-
-  @include mobile {
-    margin-left: 0px;
-  }
-
   blockquote {
     margin: 1.8em 2em;
     border-left: 2px solid $gray;
@@ -412,11 +399,6 @@ nav {
 
   .comments {
     margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }
 
