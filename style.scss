@@ -149,7 +149,7 @@ strong, b {
 
 .container {
   background-color:rgba(255,255,255,.8);
-  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF); /*IE fix */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
   margin: 40px auto;
   width: 90%;
@@ -314,9 +314,18 @@ nav {
 
 /* Projects page */
 .project-card {
-  margin-bottom: 5px;
-  border-bottom: 1px $darkGray solid;
+  margin: 10px 0;
   padding: 5px 10px;
+  transition-property: box-shadow;
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    transition-property: box-shadow;
+    transition-duration: 1s;
+    box-shadow: 2px 2px 1px $lightGray;
+    cursor: auto;
+  }
   
  img {
    display: block;
@@ -329,6 +338,18 @@ nav {
    padding: 15px;
    color: $darkGray;
    position: relative;
+ }
+
+ @include mobile {
+   border-bottom: 3px $lightGray solid;
+
+   h1, h2, h3 {
+     text-align: center;
+   }
+
+   p {
+     padding: 0;
+   }
  }
 }
 
