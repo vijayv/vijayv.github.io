@@ -168,8 +168,13 @@ strong, b {
   display: flex;
   flex-wrap: wrap;
 
+  em {
+    font-size: .9em;
+  }
+
   img {
     max-width: 100%;
+    margin: 10px 0;
   }
 
   @include mobile {
