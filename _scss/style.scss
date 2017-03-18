@@ -6,7 +6,6 @@
 @import "_variables";
 // Syntax highlighting @import is at the bottom of this file
 
-
 /**************/
 /* BASE RULES */
 /**************/
@@ -170,7 +169,6 @@ strong, b {
 
   img {
     max-width: 100%;
-    margin: 10px 0;
   }
 
   @include mobile {
@@ -179,22 +177,16 @@ strong, b {
   }
 }
 
-.drawer {
-  position: fixed;
-  top: 0;
-  border: 1px blue;
-}
-
 #sidebar {
   display: block;
-  text-align: center;
-  margin: 0 auto;
+  text-align: right;
   padding: 10px 0 0 0;
   width: 20%;
 
   @include mobile {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -262,14 +254,13 @@ nav {
 //
 
 .card {
-  /*height: 240px;*/
+  // height: 240px;
   overflow: hidden;
   width: 49%;
   margin: 1px .5%;
-  text-align: center;
+  text-align: left;
   display: block;
   position: relative;
-  transition-duration: .5s;
 
   a {
       display: block;
@@ -284,22 +275,23 @@ nav {
     font-size: 2em;
     color: $white;
     line-height: 240px; // Must be same as parent div height
-  }
-  
-  &:hover {
-    transform: scale(1.03);
-    transition-duration: 1s;
-    background: $darkGray;
-    opacity: .5;
+    margin-left: 20px;
   }
 
   @include mobile {
+    margin: 0px;
+    text-align: center;
     width: 100%;
   }
 }
 
 .card.large {
   width: 100%;
+  font-size: 2em;
+  
+  @include mobile {
+    font-size: 1em;
+  }
 }
 
 .card-title {
@@ -326,16 +318,7 @@ nav {
 .project-card {
   margin: 10px 0;
   padding: 5px 10px;
-  -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  -moz-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-  &:hover {
-    transition-property: box-shadow;
-    transition-duration: 1s;
-    box-shadow: 2px 2px 1px $lightGray;
-    cursor: auto;
-  }
+  box-shadow: 2px $lightGray;
   
  img {
    display: block;
@@ -409,6 +392,16 @@ nav {
   }
 }
 
+.drawer {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  
+  @include mobile {
+    display: none;
+  }
+}
+
 .wrapper-footer {
   margin-top: 20px;
   border-top: 1px solid #ddd;
@@ -441,7 +434,7 @@ footer {
 }
 
 .profile-links {
-  margin: 20px;
+  margin: 20px 0 20px 20px;
 }
 
 @mixin column-count($ct) {
