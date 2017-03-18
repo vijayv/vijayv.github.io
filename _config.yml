@@ -73,3 +73,5 @@ exclude:
     - README.md
     - node_modules
     - assets/images/originals
+    - package.json
+    - gulpfile.js

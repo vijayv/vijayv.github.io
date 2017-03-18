@@ -3,9 +3,12 @@ layout: default
 ---
 <div class="post">
   <div class="entry content">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 id="post-title" class="post-title">{{ page.title }}</h1>
     {{ content }}
   </div>
   {% include disqus.html disqus_identifier=page.disqus_identifier %}
+  <div class="drawer">
+    <a href="{{ site.baseurl }}/projects"><div data-icon="ei-chevron-left"></div></a>
+    <a href="#post-title"><div data-icon="ei-chevron-up"></div></a>
+  </div>
 </div>
-<a href="{{ site.baseurl }}/projects">Back</a>

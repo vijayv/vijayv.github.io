@@ -5,7 +5,7 @@ title: Wells Fargo Protothon
 
 Wells Fargo reached out to Stanford and Berkeley students to help them better position their products for millennials. After exhausting countless Post-It notes and at least two poster boards, we got the happy news: First Place! In fact, UC Berkeley School of Information swept the event by claiming both the first and second prizes!
 
-![_config.yml]({{ site.baseurl }}/assets/images/optimized/wellsfargoprotothon2014.jpg)
+![_config.yml]({{ site.baseurl }}/assets/images/wellsfargoprotothon2014.jpg)
 
 We got some nice press as well:
 

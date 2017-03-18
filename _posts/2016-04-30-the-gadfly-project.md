@@ -12,11 +12,11 @@ Well, imagine the following scenario:
 
 > A user sees a provocative news headline
 >
-> <img alt="Provocative News Headline" class="materialboxed" src="{{ site.baseurl }}/assets/images/optimized/the-gadfly-project-headline.png" width="400"/>
+> <img alt="Provocative News Headline" class="materialboxed" src="{{ site.baseurl }}/assets/images/the-gadfly-project-headline.png" width="400"/>
 >
 > Instead of reading the article, the user decides to comment right away
 >
-> <img alt="Dumb Comment" class="materialboxed" src="{{ site.baseurl }}/assets/images/optimized/the-gadfly-project-comment.png" width="400"/>
+> <img alt="Dumb Comment" class="materialboxed" src="{{ site.baseurl }}/assets/images/the-gadfly-project-comment.png" width="400"/>
 >
 > The comment doesn't add to the discussion and creates a thread of unrelated replies
 
@@ -26,7 +26,7 @@ So, what if we intervened at the right moment, with a simple question based on t
 
 > The user is prompted to answer a question that is based on the article
 >
-> <img alt="Question Intervention" class="materialboxed" src="{{ site.baseurl }}/assets/images/optimized/the-gadfly-project-question.png" width="400"/>
+> <img alt="Question Intervention" class="materialboxed" src="{{ site.baseurl }}/assets/images/the-gadfly-project-question.png" width="400"/>
 
 Paternalistic, you say?
 

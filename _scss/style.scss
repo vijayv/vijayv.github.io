@@ -1,0 +1,456 @@
+//
+// IMPORTS
+//
+
+@import "_reset";
+@import "_variables";
+// Syntax highlighting @import is at the bottom of this file
+
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html{
+  font-size: 100%;
+  /* Ensure the html element always takes up the full height of the browser window */
+  min-height:100%;
+
+  /* The Magic */
+  background-size:cover;
+}
+
+body {
+  /* Workaround for some mobile browsers */
+  min-height:100%;
+  font: 18px/1.4 $merriweather;
+  color: $darkGray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $lato;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  background-color:rgba(255,255,255,.8);
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF); /*IE fix */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+
+  @include mobile {
+    margin: 10px auto;
+  }
+}
+
+#content {
+  width: 75%;
+  max-width: 700px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  em {
+    font-size: .9em;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  border: 1px blue;
+}
+
+#sidebar {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+  width: 20%;
+
+  @include mobile {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.site-avatar {
+  img {
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.site-name {
+  margin: 0;
+  color: $darkGray;
+  cursor: pointer;
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.site-description {
+  margin: -5px 0 0 0;
+  font-family: $lato;
+  color: $gray;
+  font-size: 14px;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
+nav {
+  font-family: $lato;
+  font-size: 16px;
+  background-color: inherit;
+  box-shadow: none;
+
+  @include mobile {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+  }
+
+  a {
+    margin-left: 10px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $blue;
+    }
+  }
+}
+
+//
+// homepage
+//
+
+.card {
+  /*height: 240px;*/
+  overflow: hidden;
+  width: 49%;
+  margin: 1px .5%;
+  text-align: center;
+  display: block;
+  position: relative;
+  transition-duration: .5s;
+
+  a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
+    color: $white;
+    line-height: 240px; // Must be same as parent div height
+  }
+  
+  &:hover {
+    transform: scale(1.03);
+    transition-duration: 1s;
+    background: $darkGray;
+    opacity: .5;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.card.large {
+  width: 100%;
+}
+
+.card-title {
+  color: $white;
+  z-index: -1;
+}
+
+#projects-card {
+  background: url('./images/project.jpg') no-repeat center center;
+  background-size: 100%;
+}
+
+#about-card {
+  background: url('./images/travel.jpg') no-repeat center center;
+  background-size: 100%;
+}
+
+#resume-card {
+  background: url('./images/book.jpeg') no-repeat center center;
+  background-size: 100%;
+}
+
+/* Projects page */
+.project-card {
+  margin: 10px 0;
+  padding: 5px 10px;
+  -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -moz-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+  &:hover {
+    transition-property: box-shadow;
+    transition-duration: 1s;
+    box-shadow: 2px 2px 1px $lightGray;
+    cursor: auto;
+  }
+  
+ img {
+   display: block;
+   margin: 0 auto;
+   position: static;
+ }
+
+ p {
+   fill-opacity: .6em;
+   padding: 15px;
+   color: $darkGray;
+   position: relative;
+ }
+
+ @include mobile {
+   box-shadow: 2px 2px 1px $lightGray;
+
+   h1, h2, h3 {
+     text-align: center;
+   }
+
+   p {
+     padding: 0;
+   }
+ }
+}
+
+.tags {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+}
+
+.chip {
+  border: 1px $lightGray solid;
+  background: $lightGray;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: .85em;
+  font-style: $helveticaNeue;
+  margin: 2px;
+}
+
+// Post
+.entry {
+  padding: 10px 10px;
+
+  @include mobile {
+    margin: 20px 0;
+  }
+}
+
+.entry .content h1 {
+  margin: 0;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em 2em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+}
+
+.wrapper-footer {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color:rgba(255,255,255,.8);
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);/*IE fix */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFFFF,endColorstr=#66FFFFFF);     /* IE Fix */
+}
+
+.wrapper-footer-container {
+  padding: 10px 50px;
+}
+
+footer {
+  padding: 0px 0px;
+  text-align: center;
+}
+
+/* Mobile Specific Settings */
+@media (max-width: 767px) {
+
+  .entry h1 {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .affix {
+    position: static;
+  }
+}
+
+.profile-links {
+  margin: 20px;
+}
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "_highlights";
+@import "_svg-icons";
