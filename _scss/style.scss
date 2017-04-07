@@ -15,8 +15,7 @@ html{
   /* Ensure the html element always takes up the full height of the browser window */
   min-height:100%;
 
-  /* The Magic */
-  background-size:cover;
+  background-size: cover;
 }
 
 body {
@@ -180,7 +179,6 @@ strong, b {
 #sidebar {
   display: block;
   text-align: right;
-  padding: 10px 0 0 0;
   width: 20%;
 
   @include mobile {
