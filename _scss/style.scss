@@ -308,8 +308,8 @@ nav {
 }
 
 #resume-card {
-  background: url('./images/book.jpg') no-repeat center center;
-  background-size: 100%;
+  background: url('./images/resume_converted.jpg') no-repeat center center;
+  background-size: 130%;
 }
 
 /* Projects page */
@@ -367,7 +367,7 @@ nav {
   padding: 10px 10px;
 
   @include mobile {
-    margin: 20px 0;
+    margin: 10px 0;
   }
 }
 
