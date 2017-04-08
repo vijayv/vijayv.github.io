@@ -252,7 +252,7 @@ nav {
 //
 
 .card {
-  // height: 240px;
+  max-height: 240px;
   overflow: hidden;
   width: 49%;
   margin: 1px .5%;
@@ -277,7 +277,7 @@ nav {
   }
 
   @include mobile {
-    margin: 0px;
+    margin: 5px 0;
     text-align: center;
     width: 100%;
   }
