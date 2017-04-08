@@ -46,4 +46,4 @@ gulp.task('jekyll', () => {
   jekyll.stderr.on('data', jekyllLogger);
 });
 
-gulp.task('default', ['css', 'watch', 'jekyll']);
+gulp.task('default', ['css', 'images', 'watch', 'jekyll']);
